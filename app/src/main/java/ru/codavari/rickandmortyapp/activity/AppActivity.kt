@@ -12,7 +12,6 @@ import dagger.android.HasAndroidInjector
 import ru.codavari.rickandmortyapp.R
 import ru.codavari.rickandmortyapp.databinding.ActivityApplicationBinding
 import ru.codavari.rickandmortyapp.di.ViewModelFactory
-import ru.gazpromneft.tenders.activity.AppViewModel
 import javax.inject.Inject
 
 class AppActivity : AppCompatActivity(), HasAndroidInjector {

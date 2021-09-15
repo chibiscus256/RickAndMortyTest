@@ -5,38 +5,26 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
-import com.kurt.example.rickandmorty.characters.R
-import com.kurt.example.rickandmorty.characters.di.DaggerCharactersListComponent
-import com.kurt.example.rickandmorty.core.presentation.BaseFragment
-import com.kurt.example.rickandmorty.core.presentation.UiState
-import com.kurt.example.rickandmorty.core.presentation.app.coreComponent
-import com.kurt.example.rickandmorty.core.presentation.views.EmptyView
-import com.kurt.example.rickandmorty.core.presentation.views.LoadingView
+import ru.codavari.rickandmortyapp.R
+import ru.codavari.rickandmortyapp.base.BaseFragment
+import ru.codavari.rickandmortyapp.databinding.FragmentCharactersListBinding
+import ru.codavari.rickandmortyapp.ui.MainNavigator
 import javax.inject.Inject
 
-/**
- * Copyright 2019, Kurt Renzo Acosta, All rights reserved.
- *
- * @author Kurt Renzo Acosta
- * @since 07/31/2019
- */
-class CharactersListFragment : BaseFragment<CharactersListViewModel>() {
+class CharactersListFragment : BaseFragment<
+    FragmentCharactersListBinding, MainNavigator, CharactersListViewModel>(
+    CharactersListViewModel::class.java,
+    R.layout.fragment_characters_list,
+    ::MainNavigator,
+    isViewModelStoreOwner = true
+) {
     @Inject
     lateinit var factory: CharactersListViewModel.Factory
-
-    override val viewModel: CharactersListViewModel by viewModels(factoryProducer = { factory })
-    override val layout: Int = R.layout.fragment_characters_list
 
     private val charactersAdapter by lazy { CharactersPagedListAdapter() }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        DaggerCharactersListComponent
-            .builder()
-            .coreComponent(coreComponent())
-            .build()
-            .inject(this)
 
 
         val recCharacters by lazy { view.findViewById<RecyclerView>(R.id.rec_characters) }
@@ -52,7 +40,8 @@ class CharactersListFragment : BaseFragment<CharactersListViewModel>() {
         viewModel.getCharactersState.observe(this, Observer {
             recCharacters.visibility = if (it == UiState.Complete) View.VISIBLE else View.GONE
             loadingCharacters.visibility = if (it == UiState.Loading) View.VISIBLE else View.GONE
-            emptyCharacters.visibility = if (it is UiState.Error || it == UiState.Empty) View.VISIBLE else View.GONE
+            emptyCharacters.visibility =
+                if (it is UiState.Error || it == UiState.Empty) View.VISIBLE else View.GONE
         })
     }
 }

@@ -17,9 +17,7 @@ import ru.codavari.rickandmortyapp.activity.AppActivity
 import ru.codavari.rickandmortyapp.di.ViewModelFactory
 import ru.gazpromneft.tenders.base.BaseViewModel
 import ru.gazpromneft.tenders.base.Navigator
-import ru.gazpromneft.tenders.base.UIEffect
 import ru.gazpromneft.tenders.common.extensions.launchCollect
-import ru.gazpromneft.tenders.di.ViewModelFactory
 import javax.inject.Inject
 
 open class BaseBottomSheetDialogFragment<DB : ViewDataBinding, N : Navigator, VM : BaseViewModel<N>>(

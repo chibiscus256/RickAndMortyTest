@@ -1,7 +1,8 @@
-package ru.gazpromneft.tenders.activity
+package ru.codavari.rickandmortyapp.activity
 
 import ru.gazpromneft.tenders.base.Navigator
 import androidx.navigation.NavController
+import ru.codavari.rickandmortyapp.di.Global
 import ru.gazpromneft.tenders.di.Global
 import ru.gazpromneft.tenders.feature.coordinator.CoordinatorFragmentDirections
 import ru.gazpromneft.tenders.feature.main.MainFragmentDirections
@@ -13,13 +14,5 @@ class AppNavigator @Inject constructor(
 
     fun navigateMain() = navController.navigate(
         CoordinatorFragmentDirections.navigateMain()
-    )
-
-    fun navigateOnboarding() = navController.navigate(
-        CoordinatorFragmentDirections.navigateOnboarding()
-    )
-
-    fun navigateNewPassword(email: String, checkword: String) = navController.navigate(
-        CoordinatorFragmentDirections.navigateNewPasswordFragment(email, checkword)
     )
 }

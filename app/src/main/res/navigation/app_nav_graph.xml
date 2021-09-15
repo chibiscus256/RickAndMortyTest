@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_nav_graph"
+    app:startDestination="@id/coordinatorFragment">
+
+    <fragment
+        android:id="@+id/charactersListFragment"
+        android:name="ru.codavari.rickandmortyapp.ui.characters.CharactersListFragment"
+        android:label="charactersListFragment" />
+
+    <fragment
+        android:id="@+id/episodesListFragment"
+        android:name="ru.codavari.rickandmortyapp.ui.episodes.EpisodesListFragment"
+        android:label="episodesListFragment" />
+
+    <fragment
+        android:id="@+id/locationsListFragment"
+        android:name="ru.codavari.rickandmortyapp.ui.locations.LocationsListFragment"
+        android:label="locationsListFragment" />
+</navigation>

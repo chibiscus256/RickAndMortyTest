@@ -5,6 +5,7 @@ import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import android.view.*
+import ru.codavari.rickandmortyapp.BR
 import androidx.annotation.LayoutRes
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
@@ -19,7 +20,6 @@ import ru.codavari.rickandmortyapp.activity.AppActivity
 import ru.codavari.rickandmortyapp.di.ViewModelFactory
 import ru.gazpromneft.tenders.base.BaseViewModel
 import ru.gazpromneft.tenders.base.Navigator
-import ru.gazpromneft.tenders.base.UIEffect
 import javax.inject.Inject
 import timber.log.Timber
 
@@ -91,12 +91,12 @@ abstract class BaseFragment<DB : ViewDataBinding, N : Navigator, VM : BaseViewMo
         return binding.root
     }
 
-    override fun onStart() {
+/*    override fun onStart() {
         binding.root.findViewById<MaterialToolbar>(R.id.topAppBar)?.let {
             it.setNavigationOnClickListener { onBackPressed() }
         }
         super.onStart()
-    }
+    }*/
 
     open fun onBind() {}
 

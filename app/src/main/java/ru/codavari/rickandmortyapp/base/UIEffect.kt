@@ -1,3 +1,3 @@
-package ru.gazpromneft.tenders.base
+package ru.codavari.rickandmortyapp.base
 
 abstract class UIEffect

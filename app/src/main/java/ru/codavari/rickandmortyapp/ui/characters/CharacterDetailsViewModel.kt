@@ -1,19 +1,13 @@
 package ru.codavari.rickandmortyapp.ui.characters
 
 import androidx.lifecycle.*
-import com.kurt.example.rickandmorty.core.domain.entities.Episode
-import com.kurt.example.rickandmorty.core.domain.usecases.GetCharacter
-import com.kurt.example.rickandmorty.core.domain.usecases.GetEpisodes
-import com.kurt.example.rickandmorty.core.presentation.UiState
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
+import ru.codavari.rickandmortyapp.data.Episode
+import ru.codavari.rickandmortyapp.usecase.GetCharacter
+import ru.codavari.rickandmortyapp.usecase.GetEpisodes
+import ru.codavari.rickandmortyapp.data.Character
 
-/**
- * Copyright 2019, Kurt Renzo Acosta, All rights reserved.
- *
- * @author Kurt Renzo Acosta
- * @since 08/01/2019
- */
 class CharacterDetailsViewModel(
     private val characterId: Int,
     private val getCharacter: GetCharacter,

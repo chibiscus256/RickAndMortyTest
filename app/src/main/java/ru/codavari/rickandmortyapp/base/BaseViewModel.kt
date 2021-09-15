@@ -7,6 +7,7 @@ import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.collect
+import ru.codavari.rickandmortyapp.base.UIEffect
 import ru.gazpromneft.tenders.common.effect.Navigate
 import ru.gazpromneft.tenders.common.effect.SetTargetResult
 import ru.gazpromneft.tenders.common.effect.ToastMessage
