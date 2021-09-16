@@ -3,10 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_episodes"
-    app:startDestination="@id/episodes_list_fragment"
     tools:ignore="UnusedNavigation">
 
-    <fragment
+<!--    <fragment
         android:id="@+id/episodes_list_fragment"
         android:name="com.kurt.example.rickandmorty.episodes.presentation.episodeslist.EpisodesListFragment"
         android:label="Episodes"
@@ -26,9 +25,6 @@
         android:name="com.kurt.example.rickandmorty.episodes.presentation.episodedetails.EpisodeDetailsFragment"
         android:label="Episode Details"
         tools:layout="@layout/fragment_episode_details">
-        <argument
-            android:name="episode_id"
-            app:argType="integer" />
-        <deepLink app:uri="rickandmorty://episodedetails/{episode_id}"/>
-    </fragment>
+
+    </fragment>-->
 </navigation>

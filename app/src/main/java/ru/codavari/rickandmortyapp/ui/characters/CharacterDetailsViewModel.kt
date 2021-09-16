@@ -8,12 +8,11 @@ import ru.codavari.rickandmortyapp.usecase.GetCharacter
 import ru.codavari.rickandmortyapp.usecase.GetEpisodes
 import ru.codavari.rickandmortyapp.data.Character
 import ru.codavari.rickandmortyapp.ui.MainNavigator
+import javax.inject.Inject
 
-class CharacterDetailsViewModel(
-    private val characterId: Int,
+class CharacterDetailsViewModel @Inject constructor(
     private val getCharacter: GetCharacter,
     private val getEpisodes: GetEpisodes,
-    private val character: Character
 ) : BaseViewModel<MainNavigator>() {
 
     private val _episodes = MutableLiveData<List<Episode>>()

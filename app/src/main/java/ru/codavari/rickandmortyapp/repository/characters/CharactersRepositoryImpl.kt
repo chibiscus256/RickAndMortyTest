@@ -3,8 +3,9 @@ package ru.codavari.rickandmortyapp.repository.characters
 import retrofit2.HttpException
 import ru.codavari.rickandmortyapp.api.CharactersApi
 import ru.codavari.rickandmortyapp.data.Character
+import javax.inject.Inject
 
-class CharactersRepositoryImpl(private val api: CharactersApi) : CharactersRepository {
+class CharactersRepositoryImpl @Inject constructor(private val api: CharactersApi) : CharactersRepository {
     override suspend fun getAllCharacters(page: Int?): List<Character> = try {
         api.getAllCharacters(page).results
     } catch (exception: HttpException) {

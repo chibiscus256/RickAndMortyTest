@@ -2,7 +2,7 @@ package ru.codavari.rickandmortyapp.helper.text
 
 import android.content.Context
 import kotlinx.parcelize.Parcelize
-import ru.gazpromneft.tenders.common.extensions.empty
+import ru.codavari.rickandmortyapp.common.extensions.empty
 
 @Parcelize
 data class ResourceUIText(

@@ -54,7 +54,7 @@ class AppActivity : AppCompatActivity(), HasAndroidInjector {
     }
 
     fun findNavController() = (supportFragmentManager
-        .findFragmentById(R.id.baseContainer) as NavHostFragment
+        .findFragmentById(R.id.mainNavHost) as NavHostFragment
             ).navController
 
     override fun onSupportNavigateUp(): Boolean {

@@ -3,6 +3,7 @@ package ru.codavari.rickandmortyapp.di
 import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
+import dagger.android.AndroidInjectionModule
 import dagger.android.AndroidInjector
 import ru.codavari.rickandmortyapp.activity.AppActivity
 import ru.codavari.rickandmortyapp.activity.AppActivityGlobalModule
@@ -16,7 +17,8 @@ import javax.inject.Singleton
     ApiModule::class,
     AppActivityGlobalModule::class,
     ApplicationContextModule::class,
-    UIModule::class
+    UIModule::class,
+    AndroidInjectionModule::class,
 ])
 interface AppComponent : AndroidInjector<MobileApplication> {
 

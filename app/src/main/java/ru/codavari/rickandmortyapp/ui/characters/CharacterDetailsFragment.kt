@@ -13,6 +13,6 @@ class CharacterDetailsFragment : BaseFragment<
     ::MainNavigator,
     isViewModelStoreOwner = true
 ) {
-/*
-    private val args: CharacterDetailsFragmentArgs by navArgs()*/
+
+    val args: CharacterDetailsFragmentArgs by navArgs()
 }

@@ -6,8 +6,8 @@ import dagger.Provides
 @Module
 class CharacterDetailsModule {
 
-/*    @Provides
+    @Provides
     fun provideArgs(
         fragment: CharacterDetailsFragment
-    ): CharacterDetailsFragmentArgs = fragment.args*/
+    ): CharacterDetailsFragmentArgs = fragment.args
 }
