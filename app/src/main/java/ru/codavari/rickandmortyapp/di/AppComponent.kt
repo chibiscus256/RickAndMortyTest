@@ -5,7 +5,7 @@ import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
 import dagger.android.AndroidInjector
-import ru.codavari.rickandmortyapp.activity.AppActivity
+import ru.codavari.rickandmortyapp.MobileApplication
 import ru.codavari.rickandmortyapp.activity.AppActivityGlobalModule
 import ru.codavari.rickandmortyapp.ui.UIModule
 import javax.inject.Singleton

@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ru.codavari.rickandmortyapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".MobileApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -11,6 +14,9 @@
         android:theme="@style/Theme.Rickandmortytest">
         <activity
             android:name=".activity.AppActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/Widget.AppCompat.ActionBar"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

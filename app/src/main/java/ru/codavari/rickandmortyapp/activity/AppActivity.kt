@@ -50,12 +50,10 @@ class AppActivity : AppCompatActivity(), HasAndroidInjector {
 
     private fun setupContent() {
         findNavController().setGraph(R.navigation.app_nav_graph)
-        //findNavController().setGraph(R.navigation.test_nav_graph)
     }
 
     fun findNavController() = (supportFragmentManager
-        .findFragmentById(R.id.mainNavHost) as NavHostFragment
-            ).navController
+        .findFragmentById(R.id.mainNavHost) as NavHostFragment).navController
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController()

@@ -1,4 +1,4 @@
-package ru.codavari.rickandmortyapp.di
+package ru.codavari.rickandmortyapp
 
 import android.app.Application
 import android.content.res.Configuration
@@ -6,7 +6,8 @@ import android.os.Build
 import android.os.StrictMode
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
-import ru.codavari.rickandmortyapp.BuildConfig
+import ru.codavari.rickandmortyapp.di.ApplicationContextModule
+import ru.codavari.rickandmortyapp.di.DaggerAppComponent
 import timber.log.Timber
 import java.util.*
 import javax.inject.Inject
@@ -20,8 +21,8 @@ class MobileApplication : Application(), HasAndroidInjector {
         @Suppress("deprecation")
         resources.updateConfiguration(
             Configuration().apply {
-                setLocale(MobileApplication.locale)
-                setLayoutDirection(MobileApplication.locale)
+                setLocale(Companion.locale)
+                setLayoutDirection(Companion.locale)
             },
             null
         )
