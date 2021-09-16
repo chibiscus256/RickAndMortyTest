@@ -11,8 +11,8 @@ open class BindingViewHolder(
     open fun bind(model: Model, listener: ItemAdapter.Listener?) {
         binding.apply {
             setVariable(BR.item, model.item)
-            setVariable(BR.listener, listener)
-            setVariable(BR.position, bindingAdapterPosition)
+            /*setVariable(BR.listener, listener)*/
+            /*setVariable(BR.position, bindingAdapterPosition)*/
         }
     }
 }

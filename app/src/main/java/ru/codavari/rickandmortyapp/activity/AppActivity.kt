@@ -29,7 +29,9 @@ class AppActivity : AppCompatActivity(), HasAndroidInjector {
     override fun androidInjector(): AndroidInjector<Any> = androidInjector
 
     override fun onCreate(savedInstanceState: Bundle?) {
+/*
         setTheme(R.style.Theme_Tenders)
+*/
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
 

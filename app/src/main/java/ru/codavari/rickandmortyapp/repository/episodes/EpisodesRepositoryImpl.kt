@@ -1,4 +1,4 @@
-package ru.codavari.rickandmortyapp.reposiory.episodes
+package ru.codavari.rickandmortyapp.repository.episodes
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

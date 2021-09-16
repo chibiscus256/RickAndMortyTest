@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="recyclerview_padding">16dp</dimen>
-    <dimen name="card_padding">8dp</dimen>
+    <dimen name="card_padding">4dp</dimen>
     <dimen name="size_16">16dp</dimen>
+    <dimen name="size_250">250dp</dimen>
+
+    <dimen name="text_14">14sp</dimen>
+    <dimen name="window_padding">8dp</dimen>
+    <dimen name="cardview_margin">6dp</dimen>
 </resources>

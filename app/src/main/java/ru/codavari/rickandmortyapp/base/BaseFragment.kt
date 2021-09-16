@@ -13,12 +13,10 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
-import com.google.android.material.appbar.MaterialToolbar
 import dagger.android.support.AndroidSupportInjection
 import ru.codavari.rickandmortyapp.R
 import ru.codavari.rickandmortyapp.activity.AppActivity
 import ru.codavari.rickandmortyapp.di.ViewModelFactory
-import ru.gazpromneft.tenders.base.BaseViewModel
 import ru.gazpromneft.tenders.base.Navigator
 import javax.inject.Inject
 import timber.log.Timber

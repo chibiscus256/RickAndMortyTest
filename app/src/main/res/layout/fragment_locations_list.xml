@@ -18,22 +18,5 @@
         tools:listitem="@layout/list_item_location"
         tools:visibility="visible" />
 
-    <com.kurt.example.rickandmorty.core.presentation.views.LoadingView
-        android:id="@+id/loading_locations"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/rec_locations"
-        app:layout_constraintTop_toTopOf="@id/rec_locations"
-        tools:visibility="gone" />
-
-    <com.kurt.example.rickandmorty.core.presentation.views.EmptyView
-        android:id="@+id/empty_locations"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:description="@string/empty_locations_description"
-        app:layout_constraintBottom_toBottomOf="@id/rec_locations"
-        app:layout_constraintTop_toTopOf="@id/rec_locations"
-        app:title="@string/empty_locations_title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

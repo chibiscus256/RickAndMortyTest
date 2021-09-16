@@ -2,7 +2,7 @@ package ru.codavari.rickandmortyapp.ui.main
 
 import ru.codavari.rickandmortyapp.R
 import ru.codavari.rickandmortyapp.activity.AppNavigator
-import ru.gazpromneft.tenders.base.BaseViewModel
+import ru.codavari.rickandmortyapp.base.BaseViewModel
 import javax.inject.Inject
 
 class MainViewModel @Inject constructor(

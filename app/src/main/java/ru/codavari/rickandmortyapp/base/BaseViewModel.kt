@@ -1,4 +1,4 @@
-package ru.gazpromneft.tenders.base
+package ru.codavari.rickandmortyapp.base
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asFlow
@@ -7,14 +7,14 @@ import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.collect
-import ru.codavari.rickandmortyapp.base.UIEffect
-import ru.gazpromneft.tenders.common.effect.Navigate
-import ru.gazpromneft.tenders.common.effect.SetTargetResult
-import ru.gazpromneft.tenders.common.effect.ToastMessage
-import ru.gazpromneft.tenders.common.extensions.launchCollect
-import ru.gazpromneft.tenders.common.helper.text.UIText
-import ru.gazpromneft.tenders.common.helper.text.of
-import ru.gazpromneft.tenders.data.common.AppCoroutineDispatchers
+import ru.codavari.rickandmortyapp.common.extensions.launchCollect
+import ru.codavari.rickandmortyapp.common.extensions.of
+import ru.codavari.rickandmortyapp.data.common.AppCoroutineDispatchers
+import ru.codavari.rickandmortyapp.helper.UIText
+import ru.gazpromneft.tenders.base.Navigator
+import ru.codavari.rickandmortyapp.common.effect.Navigate
+import ru.codavari.rickandmortyapp.common.effect.SetTargetResult
+import ru.codavari.rickandmortyapp.common.effect.ToastMessage
 import timber.log.Timber
 
 abstract class BaseViewModel<N : Navigator> : ViewModel() {

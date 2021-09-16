@@ -18,3 +18,7 @@ annotation class AppScope
 @Scope
 @Retention(value = AnnotationRetention.RUNTIME)
 annotation class FragmentScope
+
+@Qualifier
+@Retention(value = AnnotationRetention.RUNTIME)
+annotation class Application

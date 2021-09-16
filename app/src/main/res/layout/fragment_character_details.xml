@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="item"
+            type="ru.codavari.rickandmortyapp.data.Character" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,6 +25,7 @@
         <ImageView
             android:id="@+id/img_character"
             android:layout_width="0dp"
+
             android:layout_height="0dp"
             android:layout_marginEnd="@dimen/window_padding"
             android:scaleType="centerCrop"
@@ -108,35 +111,13 @@
             app:constraint_referenced_ids="txt_species,txt_status,txt_type,txt_location,txt_location,txt_origin"
             tools:visibility="visible" />
 
-        <com.kurt.example.rickandmorty.core.presentation.views.LoadingView
-            android:id="@+id/loading_character"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@id/bar_details"
-            app:layout_constraintStart_toStartOf="@id/gln_middle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/txt_species"
-            tools:visibility="gone" />
-
-        <com.kurt.example.rickandmorty.core.presentation.views.EmptyView
-            android:id="@+id/empty_character"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            app:description="@string/try_again"
-            app:layout_constraintBottom_toBottomOf="@id/bar_details"
-            app:layout_constraintStart_toStartOf="@id/gln_middle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/txt_species"
-            app:title="@string/empty_character_title" />
-
         <androidx.constraintlayout.widget.Barrier
             android:id="@+id/bar_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:barrierDirection="bottom"
             app:constraint_referenced_ids="txt_origin,img_character" />
-
+<!--
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rec_episodes"
             android:layout_width="match_parent"
@@ -152,25 +133,7 @@
             app:layout_constraintTop_toTopOf="@id/bar_details"
             app:spanCount="2"
             tools:listitem="@layout/list_item_episode"
-            tools:visibility="visible" />
-
-        <com.kurt.example.rickandmorty.core.presentation.views.LoadingView
-            android:id="@+id/loading_episodes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@id/rec_episodes"
-            app:layout_constraintTop_toTopOf="@id/rec_episodes"
-            tools:visibility="gone" />
-
-        <com.kurt.example.rickandmorty.core.presentation.views.EmptyView
-            android:id="@+id/empty_episodes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            app:description="@string/empty_episodes_description"
-            app:layout_constraintBottom_toBottomOf="@id/rec_episodes"
-            app:layout_constraintTop_toTopOf="@id/rec_episodes"
-            app:title="@string/empty_episodes_title" />
+            tools:visibility="visible" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

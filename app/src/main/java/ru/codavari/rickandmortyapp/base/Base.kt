@@ -3,9 +3,9 @@ package ru.codavari.rickandmortyapp.base
 import android.content.Context
 import android.widget.Toast
 import ru.gazpromneft.tenders.base.Navigator
-import ru.gazpromneft.tenders.common.effect.Navigate
-import ru.gazpromneft.tenders.common.effect.SetTargetResult
-import ru.gazpromneft.tenders.common.effect.ToastMessage
+import ru.codavari.rickandmortyapp.common.effect.Navigate
+import ru.codavari.rickandmortyapp.common.effect.SetTargetResult
+import ru.codavari.rickandmortyapp.common.effect.ToastMessage
 import timber.log.Timber
 
 interface Base <N : Navigator> {

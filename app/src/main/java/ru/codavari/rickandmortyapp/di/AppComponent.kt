@@ -1,22 +1,22 @@
 package ru.codavari.rickandmortyapp.di
 
 import android.content.Context
-import com.kurt.example.rickandmorty.core.di.EpisodesModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
+import ru.codavari.rickandmortyapp.activity.AppActivity
+import ru.codavari.rickandmortyapp.activity.AppActivityGlobalModule
+import ru.codavari.rickandmortyapp.ui.UIModule
+import javax.inject.Singleton
 
-/**
- * Copyright 2019, Kurt Renzo Acosta, All rights reserved.
- *
- * @author Kurt Renzo Acosta
- * @since 08/06/2019
- */
+@Singleton
 @Component(modules = [
-    CharactersModule::class,
-    EpisodesModule::class,
-    LocationsModule::class,
-    NetworkModule::class
+    RepositoryModule::class,
+    NetworkModule::class,
+    ApiModule::class,
+    AppActivityGlobalModule::class,
+    ApplicationContextModule::class,
+    UIModule::class
 ])
 interface AppComponent : AndroidInjector<MobileApplication> {
 

@@ -5,8 +5,8 @@ import ru.codavari.rickandmortyapp.di.Global
 import ru.gazpromneft.tenders.base.Navigator
 import javax.inject.Inject
 
-class MainNavigator @Inject constructor(
-    @Global navController: NavController
+class MainNavigator(
+    navController: NavController
 ) : Navigator(navController) {
 
 }

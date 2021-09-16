@@ -3,21 +3,24 @@ package ru.codavari.rickandmortyapp.ui.characters
 import androidx.lifecycle.*
 import ru.codavari.rickandmortyapp.ui.MainNavigator
 import ru.codavari.rickandmortyapp.usecase.GetAllCharacters
-import ru.gazpromneft.tenders.base.BaseViewModel
+import ru.codavari.rickandmortyapp.base.BaseViewModel
 import javax.inject.Inject
+import ru.codavari.rickandmortyapp.data.Character
 
 class CharactersListViewModel @Inject constructor(
     private val getAllCharacters: GetAllCharacters
 ) : BaseViewModel<MainNavigator>() {
 
-    private val charactersDataSourceFactory =
-        CharactersDataSource.Factory(getAllCharacters, viewModelScope)
+    val characters = MutableLiveData<List<Character>>()
 
-    val characters: LiveData<PagedList<Character>> =
-        LivePagedListBuilder(charactersDataSourceFactory, 20).build()
+    init {
+        getCharactersList()
+    }
 
-    val getCharactersState: LiveData<UiState> =
-        Transformations.switchMap(charactersDataSourceFactory.sourceLiveData) {
-            it.getCharactersState
+    private fun getCharactersList() {
+        launch(io) {
+            characters.postValue(getAllCharacters() ?: listOf())
         }
+    }
+
 }

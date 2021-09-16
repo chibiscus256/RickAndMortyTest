@@ -4,6 +4,7 @@ import dagger.Module
 import dagger.android.ContributesAndroidInjector
 import ru.codavari.rickandmortyapp.di.FragmentScope
 import ru.codavari.rickandmortyapp.ui.characters.CharacterDetailsFragment
+import ru.codavari.rickandmortyapp.ui.characters.CharacterDetailsModule
 import ru.codavari.rickandmortyapp.ui.characters.CharactersListFragment
 import ru.codavari.rickandmortyapp.ui.episodes.EpisodeDetailsFragment
 import ru.codavari.rickandmortyapp.ui.episodes.EpisodesListFragment
@@ -23,7 +24,7 @@ abstract class UIModule {
     abstract fun charactersListFragment(): CharactersListFragment
 
     @FragmentScope
-    @ContributesAndroidInjector
+    @ContributesAndroidInjector(modules = [CharacterDetailsModule::class])
     abstract fun characterDetailsFragment(): CharacterDetailsFragment
 
     @FragmentScope

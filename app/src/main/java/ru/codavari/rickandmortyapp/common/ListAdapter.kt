@@ -1,12 +1,10 @@
-package ru.gazpromneft.tenders.common.adapter
+package ru.codavari.rickandmortyapp.common
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import ru.codavari.rickandmortyapp.common.BindingViewHolder
-import ru.codavari.rickandmortyapp.common.ItemAdapter
-import ru.gazpromneft.tenders.common.extensions.inflate
+import ru.codavari.rickandmortyapp.common.extensions.inflate
 
 /**
  * You don't have to provide ItemAdapter for every viewType

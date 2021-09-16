@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="ru.codavari.rickandmortyapp.ui.characters.CharactersListViewModel" />
@@ -15,6 +16,8 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rec_characters"
+            data="@{viewModel.characters}"
+            linearLayoutManager="@{false}"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipChildren="false"
@@ -22,7 +25,7 @@
             android:padding="@dimen/recyclerview_padding"
             android:visibility="invisible"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:spanCount="2"
+            app:spanCount="1"
             tools:listitem="@layout/list_item_character"
             tools:visibility="visible" />
 
